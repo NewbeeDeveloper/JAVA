@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplicación_basica_v1;
+package aplicacion_basica_v1;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author eduardoecheverria
  */
-public class Aplicación_Basica_V1 {
+public class Aplicacion_Basica_V1 {
 
     /**
      * @param args the command line arguments
