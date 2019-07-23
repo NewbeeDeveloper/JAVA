@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Connection;
+package conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,30 +17,28 @@ import java.util.logging.Logger;
  */
 public class Conexion {
     
-    private String db   = "system_ventas";
-    private String user = "root";
-    private String pass = "";
-    private String url  = "jdbc:mysql://localhost:3310/sga?useSSL=false";
+    private String db       = "sistema_ejemplo";
+    private String user     = "root";
+    private String pass     = "";
+    private String url      = "jdbc:mysql://localhost:3306/sga?useSSL=false";
     private Connection conn = null;
 
     public Conexion() {
         
         try {
-            //Driver SQL
+            //Utilizamos el Driver mysql
             Class.forName("com.mysql.jdbc.Driver");
-            //Obtenemos la conexión
-            conn = DriverManager.getConnection( this.url, this.user, this.pass);
+            
+            //Realizamos la conexión
+            conn = DriverManager.getConnection(this.url, this.user, this.pass);
+            
+            //Validamos la conexión
             if(conn != null){
-                //Imprimimos mensaje de conexión realizada con éxito
-                System.out.println("Base de Datos Ok:" + this.db );
+                System.out.println("-- CONEXIÓN ESTABLECIDA --");
             }
+            
         } catch (ClassNotFoundException | SQLException ex) {
-            System.out.println("Error:" + ex);
-        }      
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }  
-
-    public Connection getConn() {
-        return conn;
-    }
-   
 }
