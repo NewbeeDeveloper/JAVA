@@ -50,7 +50,7 @@ public class ElementsSum {
 		System.out.println("Numbers: " + num1 + num2 + num3 + num4 + "\n");
 		
 		//Call the combine method, which will make the addition among all the possibilities		
-        combine(num1, num2, num3, num4 );
+        	combine(num1, num2, num3, num4 );
 	}
 
 }
